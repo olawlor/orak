@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript" src="../../js/orakEngine.js" ></script>
+
+</head>
+<body>
+<p id="out">
+Loading...
+</p>
+
+<script>
+orakEngine.printDiv=document.getElementById("out");
+orakEngine.print("Loaded.");
+
+orakEngine.debugPrint=3;
+
+for (var i=0;i<3;i++) {
+	orakEngine.createObject("testMonster.js?sq'Urel",{},
+		function(object) {
+			orakEngine.print("Created squirrel.");
+		}
+	);
+}
+</script>
+</body>
+</html>
+
